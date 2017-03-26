@@ -22,13 +22,13 @@ Instructions for running lambda/s-CNMF:
 		      'Ainit':Ainit
 		     }
 
-          where:
-	  --> Xtrain: EHR data of patients in training data; #train_patients x #features numpy array
+          where
+          --> Xtrain: EHR data of patients in training data; #train_patients x #features numpy array
           --> Xtest: EHR data of patients in test data; #test_patients x #features numpy array
           --> ctrain: Binary (0/1) matrix representing comorbidities of patients in training data at the end of first 48 hours; #train_patients x #comorbidities numpy array
           --> ctest: Same as above for test data
-	  --> Ainit: Initialization for A; #train_patients x #comorbidities numpy array
-	  --> mortality_train: numpy array of dimension #train_patients, mortality_train[j] = 1 if 30-day mortality recorded for patient j, 0 o.w.
+          --> Ainit: Initialization for A; #train_patients x #comorbidities numpy array
+          --> mortality_train: numpy array of dimension #train_patients, mortality_train[j] = 1 if 30-day mortality recorded for patient j, 0 o.w.
           --> mortality_test: Same as above for test data
           
         h. Additional required files: filtered_conditions.txt (list of conditions) and filtered_vocabulary.txt (vocabulary list)
